@@ -6,12 +6,13 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:42 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/15 17:06:26 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/15 22:49:42 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 char *ft_strchr(const char *s, int c)
 {
@@ -26,7 +27,12 @@ char *ft_strchr(const char *s, int c)
 
 			return ((char *)(s + i));
 		}
+
 		i++;
+	}
+	if (c == '\0')
+	{
+		return ((char *)(s + i));
 	}
 
 	return (0);
@@ -35,12 +41,12 @@ char *ft_strchr(const char *s, int c)
 // int main(void)
 // {
 // 	// char c;
-// 	char x[] = "hola";
+// 	char x[] = "dasdasdsc";
 // 	// c = ' ';
-// 	printf("strchr:    %p \n", strchr(x, 'l'));
+// 	printf("strchr:    %p \n", strchr(x, 'd'));
 // 	// printf("puntero: %p \n", &c);
 
-// 	printf("ft_strchr: %p \n", ft_strchr(x, 'l'));
+// 	printf("ft_strchr: %p \n", ft_strchr(x, 'd'));
 // 	// 		char *x;
 // 	// 	char *y;
 // 	// 	y = memmove(dest, "con\0sec\0\0te\0tur", 10);
