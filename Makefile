@@ -6,16 +6,11 @@
 #    By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/10 12:53:56 by adiez-ve          #+#    #+#              #
-#    Updated: 2021/04/16 13:06:13 by adiez-ve         ###   ########.fr        #
+#    Updated: 2021/04/16 13:07:28 by adiez-ve         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-
-SRCS = 
-	
-
-
-	NAME = libft.a
+NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
