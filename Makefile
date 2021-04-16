@@ -6,33 +6,23 @@
 #    By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/10 12:53:56 by adiez-ve          #+#    #+#              #
-#    Updated: 2021/04/16 12:48:52 by adiez-ve         ###   ########.fr        #
+#    Updated: 2021/04/16 13:06:13 by adiez-ve         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_memset.c		\
-		ft_bzero.c		\
-		ft_memcpy.c		\
-		ft_memccpy.c		\
-		ft_memmove.c 	\
-		ft_memchr.c		\
-		ft_memcmp.c		\
-		ft_strlen.c		\
-		ft_isalpha.c 	\
-		ft_isdigit.c		\
-		ft_isalnum.c		\
-		ft_isascii.c		\
-		ft_isprint.c		\
-		ft_toupper.c		\
-		ft_tolower.c		\
-		ft_strchr.c		\
-		ft_strrchr.c		\
-		ft_strncmp.c		\
-		ft_strlcpy.c		\
-		ft_strlcat.c		\
-		ft_strnstr.c		\
-		ft_atoi.c		\
-	SRCS = ft_memset.c		\
+
+SRCS = 
+	
+
+
+	NAME = libft.a
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+AR = ar rcs
+RM = rm -f
+HEADER = libft.h
+
+SRC_M =	ft_memset.c		\
 		ft_bzero.c		\
 		ft_memcpy.c		\
 		ft_memccpy.c		\
@@ -65,51 +55,40 @@ SRCS = ft_memset.c		\
 	    ft_putendl_fd.c     \
 	    ft_putnbr_fd.c     \
 	
-	
 
-# SRCSB =	ft_lstnew.c			\
-# 		ft_lstadd_front.c	\
-# 		ft_lstsize.c		\
-# 		ft_lstlast.c		\
-# 		ft_lstadd_back.c	\
-# 		ft_lstclear.c		\
-# 		ft_lstdelone.c		\
-# 		ft_lstiter.c		\
-# 		ft_lstmap.c			\
-# 		$(SRCS)
+# SRC_B = ft_lstadd_back.c\
+# 	ft_lstadd_front.c	\
+# 	ft_lstclear.c		\
+# 	ft_lstdelone.c		\
+# 	ft_lstiter.c		\
+# 	ft_lstlast.c		\
+# 	ft_lstsize.c		\
+# 	ft_lstnew.c			\
+# 	ft_lstmap.c
 
-NAME = libft.a
-
-OBJS_DIR = objs/
-OBJS = $(SRCS:.c=.o)
-OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
-
-OBJSB = $(SRCSB:.c=.o)
-OBJECTS_BONUS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJSB))
-
-CC = gcc
-
-CC_FLAGS = -Wall -Wextra -Werror
-
-$(OBJS_DIR)%.o : %.c libft.h
-	@mkdir -p $(OBJS_DIR)
-	@echo "Compiling: $<"
-	@gcc $(CC_FLAGS) -c $< -o $@
-
-$(NAME): $(OBJECTS_PREFIXED)
-	@ar r $(NAME) $(OBJECTS_PREFIXED)
-	@echo "Libft Done !"
+OBJ_M = $(SRC_M:.c=.o)
+OBJ_B = $(SRC_B:.c=.o)
 
 all: $(NAME)
 
+$(NAME) : $(OBJ_M)
+	$(AR) $(NAME) $(OBJ_M)
+
+$(OBJ_M): $(SRC_M)
+	$(CC) $(CFLAGS) -c $(SRC_M)
+
+bonus: $(OBJ_M) $(OBJ_B)
+	$(AR) $(NAME) $(OBJ_M) $(OBJ_B)
+
+$(OBJ_B): $(SRC_B)
+	$(CC) $(CFLAGS) -c $(SRC_M) $(SRC_B)
+
 clean:
-	rm -rf $(OBJS_DIR)
+	$(RM) $(OBJ_M) $(OBJ_B)
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
 re: fclean all
 
-bonus: $(OBJECTS_BONUS_PREFIXED)
-	@ar r $(NAME) $(OBJECTS_BONUS_PREFIXED)
-	@echo "Libft Bonus Done !"
+.PHONY: all bonus clean fclean re 
