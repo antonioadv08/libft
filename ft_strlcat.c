@@ -93,30 +93,30 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (ft_strlen(dst) + ft_strlen(src));
 }
 
-int main(void)
-{
-	// char c[] = " ";
-	// char x[] = " ";
-	// int l = 4;
-	// c = 'h';
-	// printf("strlcat:    %li \n", strlcat(c, x, l));
+// int main(void)
+// {
+// 	// char c[] = " ";
+// 	// char x[] = " ";
+// 	// int l = 4;
+// 	// c = 'h';
+// 	// printf("strlcat:    %li \n", strlcat(c, x, l));
 
-	// printf("ft_strlcat: %li \n", ft_strlcat(c, x, l));
-	// printf("ft_strlcat: %s \n", c);
+// 	// printf("ft_strlcat: %li \n", ft_strlcat(c, x, l));
+// 	// printf("ft_strlcat: %s \n", c);
 
-	// char *str = STRING_1;
-	// char buff1[0xF00] = STRING_2;
-	// char buff2[0xF00] = STRING_2;
-	// size_t max = strlen(STRING_1) + 4;
-	char s1[4] = "4";
-	char s2[4] = "";
-	char r1,r2;
-	r1 = strlcat(s1, "thx to ntoniolo for this test !", 4);
-	r2 = ft_strlcat(s2, "thx to ntoniolo for this test !", 4);
+// 	// char *str = STRING_1;
+// 	// char buff1[0xF00] = STRING_2;
+// 	// char buff2[0xF00] = STRING_2;
+// 	// size_t max = strlen(STRING_1) + 4;
+// 	char s1[4] = "4";
+// 	char s2[4] = "";
+// 	char r1,r2;
+// 	r1 = strlcat(s1, "thx to ntoniolo for this test !", 4);
+// 	r2 = ft_strlcat(s2, "thx to ntoniolo for this test !", 4);
 
-	printf("strlcat    %i \n", r1);
-	printf("ft_strlcat %i \n", r2);
-}
+// 	printf("strlcat    %i \n", r1);
+// 	printf("ft_strlcat %i \n", r2);
+// }
 
 // static void ft_print_result(int n)
 // {
