@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 17:54:44 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/16 13:52:50 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/16 14:42:34 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,38 +15,41 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int ft_atoi(const char *str)
+int ft_isspace(char c)
 {
-	int i;
-	int negative;
-	int number;
+	return ((c >= 9 && c <= 13) || c == ' ');
+}
 
-	i = 0;
-	negative = 1;
-	number = 0;
-	if (ft_strlen(str) > 20 && str[0] == '-')
-		return (0);
+int ft_atoi(const char *nptr)
+{
+	 long unsigned n;
+	int sign;
+	 long unsigned max;
 
-	if (ft_strlen(str) > 19 && str[0] != '-')
-		return (-1);
-
-	while (str[i] == '\n' || str[i] == '\t' || str[i] == '\r' || str[i] == '\v' || str[i] == '\f' || str[i] == ' ')
-		i++;
-	if (str[i] == '-')
-		negative = -1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	sign = 1;
+	max = 9223372036854775807;
+	n = 0;
+	while (ft_isspace(*nptr))
+		nptr++;
+	if (*nptr == '-')
+		sign = -sign;
+	if (*nptr == '-' || *nptr == '+')
+		nptr++;
+	while (*nptr >= '0' && *nptr <= '9')
 	{
-		number = number * 10 + str[i] - 48;
-		i++;
+		n = 10 * n + (*nptr - '0');
+		if (n > max && sign == 1)
+			return (-1);
+		if (n > max + 1 && sign == -1)
+			return (0);
+		nptr++;
 	}
-	return (number * negative);
+	return (sign * n);
 }
 
 // int main(void)
 // {
-// 	char n[40] = "-12345678901235678899";
+// 	char n[40] = "ds";
 
 // 	int i1 = atoi(n);
 // 	int i2 = ft_atoi(n);
