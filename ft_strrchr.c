@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:21:01 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/14 20:25:10 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/16 17:01:19 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,20 +41,23 @@
 //   return 0;
 // }
 
-char	*ft_strrchr(const char *s, int c)
+char *ft_strrchr(const char *s, int c)
 {
-	int		i;
-	char	*ptr;
+	int i;
+	char *ptr;
+	unsigned char c_unsigned;
 
 	i = 0;
 	ptr = 0;
+	c_unsigned = (unsigned char)c;
+
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == c_unsigned)
 			ptr = (char *)(s + i);
 		i++;
 	}
-	if (s[i] == c)
+	if (s[i] == c_unsigned)
 		ptr = (char *)(s + i);
 	return (ptr);
 }

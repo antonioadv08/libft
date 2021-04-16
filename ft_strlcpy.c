@@ -6,17 +6,17 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:47 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/08 17:07:02 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/16 16:59:17 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-unsigned	int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned int	count;
-	unsigned int	index;
+	unsigned int count;
+	unsigned int index;
 
 	count = 0;
 	index = 0;

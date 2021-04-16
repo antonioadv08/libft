@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:25 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/14 20:24:14 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/16 15:43:51 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void *ft_memchr(const void *s, int c, size_t n)
     size_t i;
 
     i = 0;
+    if(n==0)
+    return (0);
     while (i < n && (unsigned char)c != ((unsigned char *)s)[i])
     {
         i++;
@@ -35,8 +37,8 @@ void *ft_memchr(const void *s, int c, size_t n)
 // {
 //     char c;
 //     char x[] = "hola";
-//     int number = 4;
-//     c = 'a';
+//     int number = 0;
+//     c = 0;
 //     printf("memchr: %p \n", memchr(x, c, number));
 
 //     printf("ft_memchr: %p \n", ft_memchr(x, c, number));
