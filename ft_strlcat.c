@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:45 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/15 21:10:06 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/16 00:46:57 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,62 +33,89 @@ size_t len(const char *s)
 	return (i);
 }
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+// size_t ft_strlcat(char *dst, const char *src, size_t size)
+// {
+// 	int dst_len;
+// 	int src_len;
+// 	int size_i = size;
+// 	int i;
+// 	int j;
+// 	// printf("antes size:  %li\n", size);
+
+// 	// printf("antes dst:  %s\n", dst);
+// 	// printf("antes src   %s\n", src);
+
+// 	src_len = len(src);
+// 	dst_len = len(dst);
+// 	i = 0;
+// 	j = dst_len;
+
+// 	while (i < size_i)
+// 	{
+// 		dst[j] = src[i];
+// 		i++;
+// 		j++;
+// 	}
+
+// 	if (size_i <= dst_len || (dst_len + src_len) < size_i)
+// 	{
+
+// 		printf("dst:  %s\n", dst);
+// 		printf("src   %s\n", src);
+// 		return (dst_len + src_len);
+// 	}
+// 	else
+// 	{
+// 		return (size_i - 1);
+// 	}
+// }
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int dst_len;
-	int src_len;
-	int size_i = size;
-	int i;
-	int j;
-	// printf("antes size:  %li\n", size);
+	char			*ptr;
+	unsigned int	i;
 
-	// printf("antes dst:  %s\n", dst);
-	// printf("antes src   %s\n", src);
-
-	src_len = len(src);
-	dst_len = len(dst);
-	i = 0;
-	j = dst_len;
-
-	while (i < size_i)
+	if (size < ft_strlen(dst))
+		return (ft_strlen(src) + size);
+	ptr = dst + ft_strlen(dst);
+	i = ft_strlen(dst);
+	while (i < size - 1 && *src != '\0' && size >= 2)
 	{
-		dst[j] = src[i];
+		*ptr = *src;
+		ptr++;
+		src++;
 		i++;
-		j++;
 	}
-
-	if (size_i <= dst_len || (dst_len + src_len) < size_i)
-	{
-
-		// printf("dst:  %s\n", dst);
-		// printf("src   %s\n", src);
-		return (dst_len + src_len);
-	}
-	else
-	{
-		return (size_i - 1);
-	}
+	if (size != 0)
+		*ptr = '\0';
+	return (ft_strlen(dst) + ft_strlen(src));
 }
 
-// int main(void)
-// {
-// 	// char c[] = " ";
-// 	// char x[] = " ";
-// 	// int l = 4;
-// 	// c = 'h';
-// 	// printf("strlcat:    %li \n", strlcat(c, x, l));
+int main(void)
+{
+	// char c[] = " ";
+	// char x[] = " ";
+	// int l = 4;
+	// c = 'h';
+	// printf("strlcat:    %li \n", strlcat(c, x, l));
 
-// 	// printf("ft_strlcat: %li \n", ft_strlcat(c, x, l));
-// 	// printf("ft_strlcat: %s \n", c);
+	// printf("ft_strlcat: %li \n", ft_strlcat(c, x, l));
+	// printf("ft_strlcat: %s \n", c);
 
-// 	char *str = "hola";
-// 	char buff1[0xF00] = "aaaaaa";
-// 	char buff2[0xF00] = "aaaaaa";
-// 	size_t max = 0;
+	// char *str = STRING_1;
+	// char buff1[0xF00] = STRING_2;
+	// char buff2[0xF00] = STRING_2;
+	// size_t max = strlen(STRING_1) + 4;
+	char s1[4] = "4";
+	char s2[4] = "";
+	char r1,r2;
+	r1 = strlcat(s1, "thx to ntoniolo for this test !", 4);
+	r2 = ft_strlcat(s2, "thx to ntoniolo for this test !", 4);
 
-// 	printf("strlcat    %li \n", strlcat(buff1, str, max));
-// 	printf("ft_strlcat %li \n", ft_strlcat(buff2, str, max));
-// }
+	printf("strlcat    %i \n", r1);
+	printf("ft_strlcat %i \n", r2);
+}
 
 // static void ft_print_result(int n)
 // {
