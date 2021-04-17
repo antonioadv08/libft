@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:07:09 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/17 17:08:10 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/17 17:11:40 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ void *ft_calloc(size_t nmemb, size_t size)
     return (ft_memset(str, 0, nmemb * size));
 }
 
-int main()
-{
-    char x[] = {1,2,3,6,5,8,9};
-    int size = -1;
+// int main()
+// {
+//     char x[] = {1,2,3,6,5,8,9};
+//     int size = -1;
 
-    printf("calloc:    %p \n", calloc(*x, size));
-    printf("ft_calloc: %p \n", ft_calloc(*x, size));
-}
+//     printf("calloc:    %p \n", calloc(*x, size));
+//     printf("ft_calloc: %p \n", ft_calloc(*x, size));
+// }
