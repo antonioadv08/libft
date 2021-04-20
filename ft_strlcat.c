@@ -11,28 +11,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#define STRING_1 "the cake is a lie !\0I'm hidden lol\r\n"
-#define STRING_4 "phrase differente pour le test"
-#define STRING_2 "there is no stars in the sky"
-#define STRING_3 "test basic !"
+// #define STRING_1 "the cake is a lie !\0I'm hidden lol\r\n"
+// #define STRING_4 "phrase differente pour le test"
+// #define STRING_2 "there is no stars in the sky"
+// #define STRING_3 "test basic !"
 // #include <string.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include "libft.h"
 #include <string.h>
 
-size_t len(const char *s)
-{
-	int i;
+// size_t len(const char *s)
+// {
+// 	int i;
 
-	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
-}
+// 	i = 0;
+// 	while (s[i])
+// 	{
+// 		i++;
+// 	}
+// 	return (i);
+// }
 
 // size_t ft_strlcat(char *dst, const char *src, size_t size)
 // {
@@ -70,7 +69,6 @@ size_t len(const char *s)
 // 		return (size_i - 1);
 // 	}
 // }
-#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

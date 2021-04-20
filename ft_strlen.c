@@ -6,12 +6,14 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:51 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/16 13:56:34 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/20 18:47:03 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdio.h>
+// #include <stdio.h>
+// #include "libft.h"
+
 
 
 size_t	ft_strlen(const char *s)
