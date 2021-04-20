@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 12:44:57 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/20 15:42:56 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/20 19:03:21 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,8 @@ char *ft_strnstr(const char *str, const char *find, size_t len);
 char *ft_strrchr(const char *s, int c);
 int ft_tolower(int c);
 int ft_toupper(int c);
+
+char *ft_substr(char *s, unsigned int start, size_t len);
+void *ft_calloc(size_t nmemb, size_t size);
 
 #endif
