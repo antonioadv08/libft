@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:08:00 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/20 19:13:13 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/20 19:16:02 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ char *ft_substr(char *s, unsigned int start, size_t len)
     return substr;
 }
 
-// int main(void)
-// {
-//     char str[] = "lorem ipsum dolor sit amet";
-//     int start = 0;
-//     int len = 0;
+int main(void)
+{
+    char str[] = "lorem ipsum dolor sit amet";
+    int start = 7;
+    int len = 10;
 
-//     printf("ft_substr : %s \n", ft_substr(str, start, len));
-// }
+    printf("ft_substr : %s \n", ft_substr(str, start, len));
+}
