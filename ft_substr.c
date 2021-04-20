@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:08:00 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/20 19:00:02 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/20 19:12:58 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char *ft_substr(char *s, unsigned int start, size_t len)
     if (!s)
         return (NULL);
 
-    while (i <= len)
+    while (i < start + len)
     {
 
         substr[j] = s[i];
@@ -41,13 +41,11 @@ char *ft_substr(char *s, unsigned int start, size_t len)
     return substr;
 }
 
-// int main(void)
-// {
-//     char *str;
-//     int len = 2;
-//     int start = 1;
+int main(void)
+{
+    char str[] = "lorem ipsum dolor sit amet";
+    int start = 0;
+    int len = 0;
 
-//     str = "hola";
-
-//     printf("ft_substr : %s \n", ft_substr(str, start, len));
-// }
+    printf("ft_substr : %s \n", ft_substr(str, start, len));
+}
