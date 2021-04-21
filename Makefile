@@ -6,7 +6,7 @@
 #    By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/10 12:53:56 by adiez-ve          #+#    #+#              #
-#    Updated: 2021/04/16 13:08:55 by adiez-ve         ###   ########.fr        #
+#    Updated: 2021/04/21 11:59:49 by adiez-ve         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,8 @@ SRCS = ft_memset.c		\
 	    ft_putstr_fd.c     \
 	    ft_putendl_fd.c     \
 	    ft_putnbr_fd.c     \
+		ft_strjoin.c       \
+
 	
 	
 
