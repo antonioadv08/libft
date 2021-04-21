@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:42 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/16 16:57:30 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/21 16:56:38 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char *ft_strchr(const char *s, int c)
 
 // 	printf("puntero: %s \n", &x[0]);
 
-// 	printf("ft_strchr: %p \n", ft_strchr(x, 't' + 257));
+// 	printf("ft_strchr: %s \n", ft_strchr(x, 'l'));
 // 	// 		char *x;
 // 	// 	char *y;
 // 	// 	y = memmove(dest, "con\0sec\0\0te\0tur", 10);

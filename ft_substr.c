@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:08:00 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/21 12:00:05 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/21 12:51:57 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char *ft_substr(char *s, unsigned int start, size_t len)
     j = 0;
     substr = malloc(len);
 
-    if (!s || start >= ft_strlen(s))
+    if (!s || start >= ft_strlen(s) || substr == NULL)
     {
         return (NULL);
     }
