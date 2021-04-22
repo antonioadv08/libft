@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:08:00 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/22 18:10:33 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/22 18:14:53 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char *ft_substr(char *s, unsigned int start, size_t len)
 
     i = start;
     j = 0;
-    substr = malloc(len);
+    substr = malloc(len + 1);
 
     if (!s || start >= ft_strlen(s) || substr == NULL)
     {
@@ -38,11 +38,11 @@ char *ft_substr(char *s, unsigned int start, size_t len)
     return substr;
 }
 
-// int main(void)
-// {
-//     char *str = "hola buenos dias";
-//     int start = 3;
-//     int len = 10;
+int main(void)
+{
+    char *str = "hola buenos dias";
+    int start = 3;
+    int len = 10;
 
-//     printf("ft_substr : %s \n", ft_substr(str, start, len));
-// }
+    printf("ft_substr : %s \n", ft_substr(str, start, len));
+}
