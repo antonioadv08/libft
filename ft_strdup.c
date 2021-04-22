@@ -6,13 +6,10 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:08:04 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/20 19:18:27 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/22 15:04:40 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char *ft_strdup( char *s)

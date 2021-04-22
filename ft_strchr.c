@@ -6,13 +6,12 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:42 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/21 16:56:38 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/22 15:04:02 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
-#include "libft.h"
 
 char *ft_strchr(const char *s, int c)
 {
