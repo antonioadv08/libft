@@ -6,7 +6,7 @@
 #    By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/10 12:53:56 by adiez-ve          #+#    #+#              #
-#    Updated: 2021/04/21 11:59:49 by adiez-ve         ###   ########.fr        #
+#    Updated: 2021/04/21 19:00:20 by adiez-ve         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,6 +82,7 @@ $(NAME): $(OBJECTS_PREFIXED)
 	@echo "Libft Done !"
 
 all: $(NAME)
+
 
 clean:
 	rm -rf $(OBJS_DIR)

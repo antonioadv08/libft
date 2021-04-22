@@ -6,16 +6,14 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:08:00 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/21 12:51:57 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/22 15:00:52 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h>
-// #include <stdio.h>
+
 #include "libft.h"
 
-// size_t ft_strlen(const char *s);
-// size_t ft_strlcpy(char *dest, char *src, unsigned int size);
+
 
 char *ft_substr(char *s, unsigned int start, size_t len)
 {

@@ -6,13 +6,11 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:47 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/20 18:48:48 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/22 14:59:35 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h>
-#include "libft.h"
-
+#include <stddef.h>
 
 size_t ft_strlcpy(char *dest, char *src, unsigned int size)
 {

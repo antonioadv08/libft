@@ -6,12 +6,11 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:15 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/14 20:23:56 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/21 19:16:21 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int ft_isascii(int c)
 {
@@ -23,13 +22,13 @@ int ft_isascii(int c)
     return (0);
 }
 
-// int main()
-// {
-//     char c;
-//     c =128;
-//     printf("isascii: %d", isascii(c));
+int main()
+{
+    char c;
+    c =128;
+    printf("isascii: %d", isascii(c));
 
-//     printf("\nft_isascii: %d \n", ft_isascii(c));
+    printf("\nft_isascii: %d \n", ft_isascii(c));
 
-//     return 0;
-// }
+    return 0;
+}
