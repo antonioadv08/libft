@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:07:32 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/23 15:33:18 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/23 16:01:18 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int ft_putstr_fd(char *s, int fd)
     return ((int)write(fd, s, ft_strlen(s)));
 }
 
-int main(void)
-{
+// int main(void)
+// {
 
-    char *s = "hola";
+//     char *s = "hola";
 
-    ft_putstr_fd(s, 1);
-}
+//     ft_putstr_fd(s, 1);
+// }

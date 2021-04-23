@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 11:58:47 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/21 19:29:56 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/23 16:01:59 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ char *ft_strjoin(char const *s1, char const *s2)
     return (dest);
 }
 
-int main(void)
-{
+// int main(void)
+// {
 
-    char *s1 = "hola";
-    char *s2 = "felex";
+//     char *s1 = "hola";
+//     char *s2 = "felex";
 
-    printf("ft_strjoin: %s \n", ft_strjoin(s1, s2));
-}
+//     printf("ft_strjoin: %s \n", ft_strjoin(s1, s2));
+// }
