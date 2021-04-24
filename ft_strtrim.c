@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:07:58 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/24 11:40:46 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/24 11:41:03 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (newstring);
 }
 
-int main(void)
-{
+// int main(void)
+// {
 
-    char *s1 = "hola buenos diasho";
-    char *set = "ho";
+//     char *s1 = "hola buenos diasho";
+//     char *set = "ho";
 
-    printf("ft_strtrim: %s \n", ft_strtrim(s1, set));
-}
+//     printf("ft_strtrim: %s \n", ft_strtrim(s1, set));
+// }
