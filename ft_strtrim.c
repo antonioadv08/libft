@@ -6,46 +6,34 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:07:58 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/21 17:50:44 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/24 11:40:46 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
 
-// char *ft_strtrim(char const *s1, char const *set)
-// {
+#include "libft.h"
 
-//     char *str;
-//     int i;
-//     int j;
-//     int k;
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t		size_s;
+	char		*newstring;
 
-//     int s1_len;
+	if (!s1 || !set)
+		return (NULL);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	size_s = ft_strlen(s1);
+	while (size_s && ft_strchr(set, s1[size_s]))
+		size_s--;
+	newstring = ft_substr((char*)s1, 0, size_s + 1);
+	return (newstring);
+}
 
-//     i = 0;
-//     k = 0;
-//     j = 0;
-//     s1_len = ft_strlen(s1);
-//     str = malloc(s1_len);
-//     if (str == NULL)
-//         return (NULL);
-    
-    
+int main(void)
+{
 
-    
-        
+    char *s1 = "hola buenos diasho";
+    char *set = "ho";
 
-    
-
-
-//     return str;
-// }
-
-// int main(void)
-// {
-
-//     char *s1 = "hola buenos diasho";
-//     char *set = "ho";
-
-//     printf("ft_strtrim: %s \n", ft_strtrim(s1, set));
-// }
+    printf("ft_strtrim: %s \n", ft_strtrim(s1, set));
+}
