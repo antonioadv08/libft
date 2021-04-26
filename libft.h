@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 12:44:57 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/24 11:45:01 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/26 13:41:13 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ int ft_putchar_fd(char c, int fd);
 int ft_putendl_fd(char *s, int fd);
 int ft_putnbr_fd(int n, int fd);
 int ft_putstr_fd(char *s, int fd);
+char			*ft_itoa(int n);
+
 
 
 #endif
