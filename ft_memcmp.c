@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:28 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/26 10:44:52 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/26 14:00:35 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return ((int)(*ps1 - *ps2));
 }
 
+/*int main()
+{
+    char x[] = "ads";
+    char c[] = "A";
+    int number = 2;
+    printf("memcmp: %d \n", memcmp(x, c, number));
 
-// int main()
-// {
-//     char x[] = "ads";
-//     char c[] = "A";
-//     int number = 2;
-//     printf("memcmp: %d \n", memcmp(x, c, number));
-
-//     printf("ft_memcmp: %d \n", ft_memcmp(x, c, number));
-// }
+    printf("ft_memcmp: %d \n", ft_memcmp(x, c, number));
+}*/

@@ -6,17 +6,17 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:42 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/22 15:04:02 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/26 14:20:24 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned char c_unsigned;
-	int i;
+	unsigned char	c_unsigned;
+	int				i;
 
 	c_unsigned = (unsigned char)c;
 	i = 0;
@@ -24,38 +24,35 @@ char *ft_strchr(const char *s, int c)
 	{
 		if (s[i] == c_unsigned)
 		{
-
 			return ((char *)(s + i));
 		}
-
 		i++;
 	}
 	if (c_unsigned == '\0')
 	{
 		return ((char *)(s + i));
 	}
-
 	return (0);
 }
 
-// int main(void)
-// {
-// 	// char c;S
-// 	char x[] = "turdipouillyS~ Se";
-// 	// char *p=strchr(x, 't');
-// 	// c = ' ';
+/*int main(void)
+{
+	// char c;S
+	char x[] = "turdipouillyS~ Se";
+	// char *p=strchr(x, 't');
+	// c = ' ';
 
-// 	printf("strchr:    %p \n", strchr(x, 't' + 257));
-// 	printf("strchr:    %p \n", strchr(x, 't'));
+	printf("strchr:    %p \n", strchr(x, 't' + 257));
+	printf("strchr:    %p \n", strchr(x, 't'));
 
-// 	printf("puntero: %s \n", &x[0]);
+	printf("puntero: %s \n", &x[0]);
 
-// 	printf("ft_strchr: %s \n", ft_strchr(x, 'l'));
-// 	// 		char *x;
-// 	// 	char *y;
-// 	// 	y = memmove(dest, "con\0sec\0\0te\0tur", 10);
-// 	// 	x = ft_memmove(dest, "con\0sec\0\0te\0tur", 10);
+	printf("ft_strchr: %s \n", ft_strchr(x, 'l'));
+	// 		char *x;
+	// 	char *y;
+	// 	y = memmove(dest, "con\0sec\0\0te\0tur", 10);
+	// 	x = ft_memmove(dest, "con\0sec\0\0te\0tur", 10);
 
-// 	// 	printf("memmove:    %s \n", y);
-// 	// 	printf("ft_memmove: %s \n", x);
-// }
+	// 	printf("memmove:    %s \n", y);
+	// 	printf("ft_memmove: %s \n", x);
+}*/

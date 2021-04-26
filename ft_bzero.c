@@ -6,13 +6,13 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:02 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/10 12:56:10 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/26 14:20:35 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	memset(s, '\0', n);
 }

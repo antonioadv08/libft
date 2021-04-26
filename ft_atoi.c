@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 17:54:44 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/16 14:42:34 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/26 14:09:07 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int ft_isspace(char c)
+int	ft_isspace(char c)
 {
 	return ((c >= 9 && c <= 13) || c == ' ');
 }
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
-	 long unsigned n;
-	int sign;
-	 long unsigned max;
+	long unsigned	n;
+	int				sign;
+	long unsigned	max;
 
 	sign = 1;
 	max = 9223372036854775807;
@@ -47,13 +47,13 @@ int ft_atoi(const char *nptr)
 	return (sign * n);
 }
 
-// int main(void)
-// {
-// 	char n[40] = "ds";
+/*int main(void)
+{
+	char n[40] = "ds";
 
-// 	int i1 = atoi(n);
-// 	int i2 = ft_atoi(n);
+	int i1 = atoi(n);
+	int i2 = ft_atoi(n);
 
-// 	printf("atoi:    %d \n", i1);
-// 	printf("ft_atoi: %d \n", i2);
-// }
+	printf("atoi:    %d \n", i1);
+	printf("ft_atoi: %d \n", i2);
+}*/
