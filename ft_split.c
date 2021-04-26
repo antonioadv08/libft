@@ -6,75 +6,90 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:07:36 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/26 13:16:57 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/26 13:20:52 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <unistd.h>
-#include "libft.h"
 
-static int ft_count_words(const char *s, char c)
+static int		unleah(char **str, int size)
 {
-    int count;
-    int i;
-
-    i = 0;
-    count = 0;
-    while (s[i] != '\0')
-    {
-        if (s[i] != c)
-        {
-            count++;
-            while (s[i] != c && s[i] != '\0')
-                i++;
-        }
-        else
-            i++;
-    }
-    return (count);
+	while (size--)
+		free(str[size]);
+	return (-1);
 }
 
-static char **ft_fill_array(char **aux, char const *s, char c)
+static int		count_words(const char *str, char charset)
 {
-    size_t i;
-    size_t j;
-    int k;
-    size_t s_len;
+	int	i;
+	int	words;
 
-    i = 0;
-    k = 0;
-    s_len = ft_strlen(s);
-    while (s[i])
-    {
-        while (s[i] == c && s[i] != '\0')
-            i++;
-        j = i;
-        while (s[i] != c && s[i] != '\0')
-            i++;
-        if (j >= s_len)
-            aux[k++] = "\0";
-        else
-            aux[k++] = ft_substr(s, j, i - j);
-    }
-    return (aux);
+	words = 0;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if ((str[i + 1] == charset || str[i + 1] == '\0') == 1
+				&& (str[i] == charset || str[i] == '\0') == 0)
+			words++;
+		i++;
+	}
+	return (words);
 }
 
-char **ft_split(char const *s, char c)
+static void		write_word(char *dest, const char *from, char charset)
 {
-    char **aux;
-    int nwords;
+	int	i;
 
-    if (!s)
-        return (NULL);
-    nwords = ft_count_words(s, c);
-    aux = malloc((nwords + 1) * sizeof(char *));
-    if (aux == NULL)
-        return (NULL);
-    aux = ft_fill_array(aux, s, c);
-    aux[nwords] = NULL;
-    return (aux);
+	i = 0;
+	while ((from[i] == charset || from[i] == '\0') == 0)
+	{
+		dest[i] = from[i];
+		i++;
+	}
+	dest[i] = '\0';
 }
+
+static int		write_split(char **split, const char *str, char charset)
+{
+	int		i;
+	int		j;
+	int		word;
+
+	word = 0;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if ((str[i] == charset || str[i] == '\0') == 1)
+			i++;
+		else
+		{
+			j = 0;
+			while ((str[i + j] == charset || str[i + j] == '\0') == 0)
+				j++;
+			if ((split[word] = (char*)malloc(sizeof(char) * (j + 1))) == NULL)
+				return (unleah(split, word - 1));
+			write_word(split[word], str + i, charset);
+			i += j;
+			word++;
+		}
+	}
+	return (0);
+}
+
+char			**ft_split(const char *str, char c)
+{
+	char	**res;
+	int		words;
+
+	words = count_words(str, c);
+	if ((res = (char**)malloc(sizeof(char*) * (words + 1))) == NULL)
+		return (NULL);
+	res[words] = 0;
+	if (write_split(res, str, c) == -1)
+		return (NULL);
+	return (res);
+}
+
 
 // static void ft_print_result(char const *s)
 // {
