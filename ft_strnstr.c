@@ -6,24 +6,11 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:59 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/22 15:04:23 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/26 12:07:26 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
-
-// size_t ft_strlen(const char *s)
-// {
-//     int i;
-
-//     i = 0;
-//     while (s[i])
-//     {
-//         i++;
-//     }
-//     return (i);
-// }
 
 char *ft_strnstr(const char *str, const char *find, size_t len)
 {
