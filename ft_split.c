@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:07:36 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/26 14:27:46 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/29 16:30:37 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,6 @@ char	**ft_split(const char *str, char c)
 		return (NULL);
 	return (res);
 }
-
 
 /*static void ft_print_result(char const *s)
 {

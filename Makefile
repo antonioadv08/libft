@@ -6,7 +6,7 @@
 #    By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/10 12:53:56 by adiez-ve          #+#    #+#              #
-#    Updated: 2021/04/21 19:00:20 by adiez-ve         ###   ########.fr        #
+#    Updated: 2021/04/29 16:41:43 by adiez-ve         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,28 +45,11 @@ SRCS = ft_memset.c		\
 	    ft_putnbr_fd.c     \
 		ft_strjoin.c       \
 
-	
-	
-
-# SRCSB =	ft_lstnew.c			\
-# 		ft_lstadd_front.c	\
-# 		ft_lstsize.c		\
-# 		ft_lstlast.c		\
-# 		ft_lstadd_back.c	\
-# 		ft_lstclear.c		\
-# 		ft_lstdelone.c		\
-# 		ft_lstiter.c		\
-# 		ft_lstmap.c			\
-# 		$(SRCS)
-
 NAME = libft.a
 
 OBJS_DIR = objs/
 OBJS = $(SRCS:.c=.o)
 OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
-
-OBJSB = $(SRCSB:.c=.o)
-OBJECTS_BONUS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJSB))
 
 CC = gcc
 
@@ -91,7 +74,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-bonus: $(OBJECTS_BONUS_PREFIXED)
-	@ar r $(NAME) $(OBJECTS_BONUS_PREFIXED)
-	@echo "Libft Bonus Done !"

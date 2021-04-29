@@ -6,19 +6,14 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 12:44:57 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/26 14:07:07 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/29 16:29:53 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 
 # define LIBFT_H
-
-# include <stdio.h>
-# include <unistd.h>
 # include <stdlib.h>
-# include <string.h>
-# include <ctype.h>
 
 typedef struct s_list
 {
