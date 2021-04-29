@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:08:00 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/26 14:15:12 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/29 17:07:46 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,3 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	substr[len] = '\0';
 	return (substr);
 }
-
-/*int main(void)
-{
-    char *str = "";
-    int start = 3;
-    int len = 10;
-
-    printf("ft_substr : %s \n", ft_substr(str, start, len));
-}*/

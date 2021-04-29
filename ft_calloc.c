@@ -6,16 +6,15 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:07:09 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/29 16:44:23 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/29 17:09:05 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-void *ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char *str;
+	char	*str;
 
 	if (nmemb <= 0 || size <= 0)
 		str = (char *)malloc(1);
@@ -24,13 +23,4 @@ void *ft_calloc(size_t nmemb, size_t size)
 	if (!str)
 		return (NULL);
 	return (ft_memset(str, 0, nmemb * size));
-}
-
-int main()
-{
-	char x[] = {5, 2, 3, 6, 5, 8, 9};
-	int size = 1;
-
-	printf("calloc:    %p \n", calloc(*x, size));
-	printf("ft_calloc: %p \n", ft_calloc(*x, size));
 }

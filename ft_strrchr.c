@@ -6,13 +6,9 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:21:01 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/26 17:22:04 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/29 17:07:34 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*#include <string.h>
-#include <stdio.h>
-*/
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -33,12 +29,3 @@ char	*ft_strrchr(const char *s, int c)
 		ptr = (char *)(s + i);
 	return (ptr);
 }
-
-// int main ()
-// {
-//   char str[] = "This is a sample string";
-//   char * pch;
-//   pch=ft_strrchr(str,'s');
-//   printf ("Last occurence of 's' found at %ld \n",pch-str+1);
-//   return 0;
-// }

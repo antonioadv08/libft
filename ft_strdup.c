@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:08:04 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/26 14:14:04 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/29 17:05:59 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,3 @@ char	*ft_strdup(char *s)
 	ft_strlcpy(d, s, size + 1);
 	return (d);
 }
-
-/*int main(void)
-{
-    char *str;
-    char *str_ft;
-
-    char *tmp = "HAHAHA \0 tu me vois pas !";
-
-    str = strdup(tmp);
-    str_ft = ft_strdup(tmp);
-
-    printf("strdup  :   %p\n", str);
-    printf("ft_strdup : %p\n", str_ft);
-}*/

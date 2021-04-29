@@ -6,12 +6,11 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:22 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/26 13:56:59 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/29 17:03:27 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdio.h>
 
 void	*ft_memccpy(void *dest, const void *orig, int c, size_t n)
 {
@@ -33,16 +32,3 @@ void	*ft_memccpy(void *dest, const void *orig, int c, size_t n)
 	}
 	return (0);
 }
-
-/*int main(void)
-{
-
-    char buf1[] = "Ceci est un test.";
-    char buf2[200];
-    void *p1, *p2;
-
-    p1 = memccpy(buf2, buf1, 'i', 10);
-    p2 = ft_memccpy(buf2, buf1, 'i', 10);
-    printf("memccpy %p: \n", p1);
-    printf("ft_memccpy %p: \n", p2);
-}*/

@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 17:54:44 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/29 16:30:22 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/29 17:01:30 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,15 +44,4 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	}
 	return (sign * n);
-}
-
-int main(void)
-{
-	char n[] = "-25";
-
-	int i1 = atoi(n);
-	int i2 = ft_atoi(n);
-
-	printf("atoi:    %d \n", i1);
-	printf("ft_atoi: %d \n", i2);
 }

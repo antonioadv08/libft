@@ -6,11 +6,10 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:25 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/26 13:58:31 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/29 17:03:37 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
@@ -30,14 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return ((void *)s + i);
 }
-
-/*int main()
-{
-    char c;
-    char x[] = "hola";
-    int number = 0;
-    c = 0;
-    printf("memchr: %p \n", memchr(x, c, number));
-
-    printf("ft_memchr: %p \n", ft_memchr(x, c, number));
-}*/

@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 15:20:59 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/26 14:21:05 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/29 17:07:22 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,3 @@ char	*ft_strnstr(const char *str, const char *find, size_t len)
 	}
 	return (NULL);
 }
-
-/*int main(void)
-{
-
-    char c[] = "hola felex";
-    char x[] = "la";
-    int l = 9;
-
-    // printf("strnstr:    %s \n", strnstr(c, x, l));
-
-    printf("ft_strnstr: %s \n", ft_strnstr(c, x, l));
-}*/

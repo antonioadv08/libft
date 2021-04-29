@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:07:58 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/26 14:12:06 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/04/29 17:07:39 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	newstring = ft_substr((char *)s1, 0, size_s + 1);
 	return (newstring);
 }
-
-/*int main(void)
-{
-
-    char *s1 = "hola buenos diasho";
-    char *set = "ho";
-
-    printf("ft_strtrim: %s \n", ft_strtrim(s1, set));
-}*/
