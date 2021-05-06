@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 12:08:00 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/05/07 00:16:51 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/05/07 00:22:22 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,5 @@ char *ft_substr(char *s, unsigned int start, size_t len)
 	while (i < start + len || s[i] == '\0')
 		substr[j++] = s[i++];
 	substr[len] = '\0';
-	ft_strlcpy(substr, s, len + 1);
 	return (substr);
 }
