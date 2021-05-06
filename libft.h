@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 12:44:57 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/29 16:29:53 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/05/07 00:24:17 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_strdup(char *s);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
-char	*ft_substr(char *s, unsigned int start, size_t len);
+char	*ft_substr(char const*s, unsigned int start, size_t len);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
