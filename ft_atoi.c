@@ -6,7 +6,7 @@
 /*   By: adiez-ve <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/06 17:54:44 by adiez-ve          #+#    #+#             */
-/*   Updated: 2021/04/29 17:01:30 by adiez-ve         ###   ########.fr       */
+/*   Updated: 2021/06/15 18:34:18 by adiez-ve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_isspace(char c)
+int	ft_space(char c)
 {
 	return ((c >= 9 && c <= 13) || c == ' ');
 }
@@ -28,7 +28,7 @@ int	ft_atoi(const char *nptr)
 	sign = 1;
 	max = 9223372036854775807;
 	n = 0;
-	while (ft_isspace(*nptr))
+	while (ft_space(*nptr))
 		nptr++;
 	if (*nptr == '-')
 		sign = -sign;
